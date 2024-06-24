@@ -30,10 +30,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
 POSTINSTALL_OPTIONAL_system=true
 
 # Set Vendor SPL to match platform
-VENDOR_SECURITY_PATCH = 2023-09-05
+VENDOR_SECURITY_PATCH = 2023-10-01
 
 # Set boot SPL
-BOOT_SECURITY_PATCH = 2023-09-05
+BOOT_SECURITY_PATCH = 2023-10-01
 
 # TODO(b/207450311): Remove this flag once implemented
 USE_PIXEL_GRALLOC := false
@@ -849,8 +849,6 @@ endif
 PRODUCT_PACKAGES += \
 	vndk-libs
 
-PRODUCT_ENFORCE_RRO_TARGETS := \
-	framework-res
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -875,12 +873,6 @@ PRODUCT_PACKAGES += \
 	android.hardware.fastboot@1.1-impl.pixel \
 	fastbootd
 
-#google iwlan
-PRODUCT_PACKAGES += \
-	Iwlan
-
-#Iwlan test app for userdebug/eng builds
-ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
 	IwlanTestApp
 endif
