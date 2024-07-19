@@ -17,7 +17,7 @@ jobs:
         remote-repo: LineageOS/android_device_google_gs101
         remote-branch: lineage-20
         local-repo: ${{ github.repository_owner }}/${{ github.event.repository.name }}
-        local-branch: "axp_a13"
+        local-branch: "axp-a13"
         dryrun: false  # <- set to false after a test run
     secrets: inherit
   keepalive-job:
