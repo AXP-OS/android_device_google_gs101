@@ -44,16 +44,7 @@ AB_OTA_PARTITIONS += \
     vbmeta_vendor
 
 # Reserve space for gapps install
-ifneq ($(WITH_GMS),true)
-BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := -1
-BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 614400000
-BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := -1
-BOARD_SYSTEM_EXTIMAGE_EXTFS_INODE_COUNT := -1
-# using common reserved sized as in:
-# https://github.com/LineageOS/android_vendor_lineage/blob/08343528558d0bdf4f9e4075363738bea783c1f8/config/BoardConfigReservedSize.mk#L31
-BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 94371840
-BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 94371840
-endif
+# removed by AXP.OS #
 
 # Verified Boot
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
