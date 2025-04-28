@@ -875,15 +875,6 @@ PRODUCT_PACKAGES += \
 	android.hardware.fastboot@1.1-impl.pixel \
 	fastbootd
 
-#google iwlan
-PRODUCT_PACKAGES += \
-	Iwlan
-
-#Iwlan test app for userdebug/eng builds
-ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
-PRODUCT_PACKAGES += \
-	IwlanTestApp
-endif
 
 PRODUCT_PACKAGES += \
 	whitelist \
